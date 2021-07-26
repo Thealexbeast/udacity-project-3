@@ -16,7 +16,7 @@ script:
   - docker build -t reverseproxy .
   - docker tag simple-node alexanderpavlak/reverseproxy:latest
   
-  after_success:
+after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push alexanderpavlak/udagram-api-feed:v1
   - docker push alexanderpavlak/udagram-api-user:v1
