@@ -13,7 +13,7 @@ script:
   - docker tag udagram-api-user alexanderpavlak/udagram-api-user:latest
   - docker build -t udagram-frontend ./udagram-frontend
   - docker tag udagram-frontend alexanderpavlak/udagram-frontend:latest
-  - docker build -t reverseproxy ./reverseproxy
+  - docker build -t reverseproxy ./udagram-reverseproxy
   - docker tag reverseproxy alexanderpavlak/reverseproxy:latest
   
 after_success:
